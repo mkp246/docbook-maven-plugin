@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN" "docbook-xml-4.5/docbookx.dtd">
+<refentry>
+    <refentryinfo>
+        <date>01/01/2021</date>
+    </refentryinfo>
+    <refmeta>
+        <refentrytitle>server.ports</refentrytitle>
+        <manvolnum>4</manvolnum>
+    </refmeta>
+    <refnamediv>
+        <refname>server.ports</refname>
+        <refpurpose>The following information shows the ports the server listens on. If conflicts, you can change many
+            of these port numbers.
+        </refpurpose>
+    </refnamediv>
+    <refsection>
+        <title>SYNOPSIS</title>
+        <cmdsynopsis sepchar=" ">
+            <command>server.ports</command>
+        </cmdsynopsis>
+        <para>There is no command synopsis. The
+            <citetitle>server.ports</citetitle>
+            documents the ports you can modify in <computeroutput>server.properties</computeroutput> file.
+        </para>
+    </refsection>
+    <refsection>
+        <title>DESCRIPTION</title>
+        <para>To change these port numbers, follow these steps:</para>
+        <para>
+            1. Edit the
+            <computeroutput>%AppData%\server\props\server.properties</computeroutput>
+            (Windows) or
+            <computeroutput>/var/server/props/server.properties</computeroutput>
+            (Unix) file to modify the ports.
+        </para>
+        <para>
+            2. Identify the line, uncomment if needed, update value and save your changes.
+        </para>
+        <para>
+            3. From a command prompt <computeroutput>restart</computeroutput> the server.
+        </para>
+        <para>
+            The following ports are currently defined:
+        </para>
+        <variablelist>
+            <varlistentry>
+                <term>server.port.web.http=80</term>
+                <listitem>
+                    <para>This TCP port is used as the default HTTP port for Web UI and Web Services.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>server.port.web.https=443</term>
+                <listitem>
+                    <para>This TCP port is used as the default secure HTTPS port for Web UI and Web Services.
+                    </para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>server.port.naming.rmi=1098</term>
+                <listitem>
+                    <para>This is the default TCP port of the RMI naming service.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>server.port.remoting.ejb3=1099</term>
+                <listitem>
+                    <para>This TCP port is the default listening port for the JNDI provider.
+                    </para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>server.port.remoting.ejb3=3873</term>
+                <listitem>
+                    <para>This TCP port is used for remote access by command line tools.
+                    </para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>server.port.jmx.jrmp=4444</term>
+                <listitem>
+                    <para>This TCP port is the RMI Object port used by RMI to transfer
+                        data.
+                    </para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>server.port.jmx.rmi=4445</term>
+                <listitem>
+                    <para>This TCP port is the default port (invoker port) used when pooling RMI requests.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>server.port.invoker.unified=4446</term>
+                <listitem>
+                    <para>This TCP port is the default RMI remoting server connector port. <computeroutput>Remoting
+                    </computeroutput> service uses this port.
+                    </para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>server.port.ts.recovery=4712</term>
+                <listitem>
+                    <para>This TCP port is an internal transaction service port used by server.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>server.port.ts.status=4713</term>
+                <listitem>
+                    <para>This TCP port is an internal transaction service port used by server.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>server.port.ts.id=4714</term>
+                <listitem>
+                    <para>This TCP port is an internal transaction service port used by server.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>server.postgres.port=5432</term>
+                <listitem>
+                    <para>This TCP port is the port the embedded database listens.
+                    </para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>AUTHOR</title>
+        <para>
+            <computeroutput>server.ports</computeroutput>
+            was developed by opensource Community.
+        </para>
+    </refsection>
+    <refsection>
+        <title>FILES</title>
+        <para><emphasis>Windows</emphasis>:
+            <computeroutput>%AppData%\server\props\server.properties</computeroutput>
+        </para>
+        <para><emphasis>UNIX</emphasis>:
+            <computeroutput>/var/server/props/server.properties</computeroutput>
+        </para>
+    </refsection>
+    <refsection>
+        <title>SEE ALSO</title>
+        <para>
+            <citerefentry>
+                <refentrytitle>
+                    <ulink url="server.properties.4.html">server.properties</ulink>
+                </refentrytitle>
+                <manvolnum>4</manvolnum>
+            </citerefentry>
+        </para>
+        <para>
+            <ulink url="refindex.html">Return to Reference Index</ulink>
+        </para>
+    </refsection>
+</refentry>

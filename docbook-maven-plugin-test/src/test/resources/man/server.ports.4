@@ -1,0 +1,132 @@
+.\"     Title: server.ports
+.\"    Author: 
+.\" Generator: DocBook XSL Stylesheets v1.73.2 <http://docbook.sf.net/>
+.\"      Date: 01/01/2021
+.\"    Manual: 
+.\"    Source: 
+.\"
+.TH "SERVER\.PORTS" "4" "01/01/2021" "" ""
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.SH "NAME"
+server.ports - The following information shows the ports the server listens on. If conflicts, you can change many of these port numbers.
+.SH "SYNOPSIS"
+.HP 13
+\fBserver\.ports\fR
+.PP
+There is no command synopsis\. The
+server\.ports
+documents the ports you can modify in
+server\.properties
+file\.
+.SH "DESCRIPTION"
+.PP
+To change these port numbers, follow these steps:
+.PP
+1\. Edit the
+%AppData%\eserver\eprops\eserver\.properties
+(Windows) or
+/var/server/props/server\.properties
+(Unix) file to modify the ports\.
+.PP
+2\. Identify the line, uncomment if needed, update value and save your changes\.
+.PP
+3\. From a command prompt
+restart
+the server\.
+.PP
+The following ports are currently defined:
+.PP
+server\.port\.web\.http=80
+.RS 4
+This TCP port is used as the default HTTP port for Web UI and Web Services\.
+.RE
+.PP
+server\.port\.web\.https=443
+.RS 4
+This TCP port is used as the default secure HTTPS port for Web UI and Web Services\.
+.RE
+.PP
+server\.port\.naming\.rmi=1098
+.RS 4
+This is the default TCP port of the RMI naming service\.
+.RE
+.PP
+server\.port\.remoting\.ejb3=1099
+.RS 4
+This TCP port is the default listening port for the JNDI provider\.
+.RE
+.PP
+server\.port\.remoting\.ejb3=3873
+.RS 4
+This TCP port is used for remote access by command line tools\.
+.RE
+.PP
+server\.port\.jmx\.jrmp=4444
+.RS 4
+This TCP port is the RMI Object port used by RMI to transfer data\.
+.RE
+.PP
+server\.port\.jmx\.rmi=4445
+.RS 4
+This TCP port is the default port (invoker port) used when pooling RMI requests\.
+.RE
+.PP
+server\.port\.invoker\.unified=4446
+.RS 4
+This TCP port is the default RMI remoting server connector port\.
+Remoting
+service uses this port\.
+.RE
+.PP
+server\.port\.ts\.recovery=4712
+.RS 4
+This TCP port is an internal transaction service port used by server\.
+.RE
+.PP
+server\.port\.ts\.status=4713
+.RS 4
+This TCP port is an internal transaction service port used by server\.
+.RE
+.PP
+server\.port\.ts\.id=4714
+.RS 4
+This TCP port is an internal transaction service port used by server\.
+.RE
+.PP
+server\.postgres\.port=5432
+.RS 4
+This TCP port is the port the embedded database listens\.
+.RE
+.SH "AUTHOR"
+.PP
+
+server\.ports
+was developed by opensource Community\.
+.SH "FILES"
+.PP
+\fIWindows\fR:
+%AppData%\eserver\eprops\eserver\.properties
+.PP
+\fIUNIX\fR:
+/var/server/props/server\.properties
+.SH "SEE ALSO"
+.PP
+
+\fB server.properties \fR(4)
+.PP
+
+\fIReturn to Reference Index\fR\&[2]
+.SH "NOTES"
+.IP " 1." 4
+server.properties
+.RS 4
+\%server.properties.4.html
+.RE
+.IP " 2." 4
+Return to Reference Index
+.RS 4
+\%refindex.html
+.RE

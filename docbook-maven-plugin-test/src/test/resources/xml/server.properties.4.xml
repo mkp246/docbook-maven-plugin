@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN" "docbook-xml-4.5/docbookx.dtd">
+<refentry>
+    <refentryinfo>
+        <date>01/01/2021</date>
+    </refentryinfo>
+    <refmeta>
+        <refentrytitle>server.properties</refentrytitle>
+        <manvolnum>4</manvolnum>
+    </refmeta>
+    <refnamediv>
+        <refname>server.properties</refname>
+        <refpurpose>This file contains the server properties.</refpurpose>
+    </refnamediv>
+    <refsection>
+        <title>SYNOPSIS</title>
+        <cmdsynopsis sepchar=" ">
+            <command>server.properties</command>
+        </cmdsynopsis>
+    </refsection>
+    <refsection>
+        <title>DESCRIPTION</title>
+        <para>The <computeroutput>server.properties</computeroutput> file contains server properties which can be modified
+            by user when needed
+        </para>
+        <para>Editing this file requires an administrative user.
+        </para>
+    </refsection>
+    <refsection>
+        <title>AUTHOR</title>
+        <para>
+            <computeroutput>server.properties</computeroutput>
+            was developed by opensource community.
+        </para>
+    </refsection>
+    <refsection>
+        <title>FILES</title>
+        <para>Server property files.</para>
+    </refsection>
+    <refsection>
+        <title>SEE ALSO</title>
+        <para>
+            <citerefentry>
+                <refentrytitle>
+                    <ulink url="server.ports.4.html">server.ports</ulink>
+                </refentrytitle>
+                <manvolnum>4</manvolnum>
+            </citerefentry>
+        </para>
+        <para>
+            <ulink url="refindex.html">Return to Reference Index</ulink>
+        </para>
+    </refsection>
+</refentry>
